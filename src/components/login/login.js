@@ -72,9 +72,9 @@ export default class Login extends React.Component {
                       <Col
                         sm="12"
                         xs="12"
-                        md={{ span: 4, offset: 4 }}
-                        lg={{ span: 4, offset: 4 }}
-                        xl={{ span: 4, offset: 4 }}
+                        md={{ span: 8, offset: 2 }}
+                        lg={{ span: 8, offset: 2 }}
+                        xl={{ span: 8, offset: 2 }}
                       >
                         <Form>
                           <Form.Group>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Login from '../login/login';
-import Inicio from '../index/index';
+import Inicio from '../index/Index';
 import PrivateRoute from '../auth/privaterouter';
 import productos from '../productos/iniciop';
 import michidads from '../michidads/iniciom';

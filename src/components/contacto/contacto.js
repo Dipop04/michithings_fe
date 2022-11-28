@@ -45,7 +45,7 @@ export const Contacto = () => {
   };
 
   return (
-        <section className="contact" id="connect">
+        <section className="contact" id="contacto">
         <Container>
           <Row className="align-items-center">
             <Col size={12} md={6}>
@@ -59,7 +59,7 @@ export const Contacto = () => {
               <TrackVisibility>
                 {({ isVisible }) =>
                   <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <h2>Get In Touch</h2>
+                  <h2>Contáctanos</h2>
                   <form onSubmit={handleSubmit}>
                     <Row>
                       <Col size={12} sm={6} className="px-1">
