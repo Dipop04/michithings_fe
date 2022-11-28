@@ -5,6 +5,9 @@ import Inicio from '../index/index';
 import PrivateRoute from '../auth/privaterouter';
 import productos from '../productos/iniciop';
 import michidads from '../michidads/iniciom';
+import { Image } from 'react-bootstrap';
+import { NotFound } from '../NotFound/NotFound';
+
 
 export default function AppRoutes() {
   return (
@@ -13,17 +16,20 @@ export default function AppRoutes() {
         <PrivateRoute exact path={['/productos']} component={productos} />
         <PrivateRoute exact path={['/michidads']} component={michidads} />
         <Route exact path={['/login']} component={Login} />
+        
         <Route exact path={['/', '/index']} component={Inicio} />
         <Route
           path={'*'}
-          component={() => (
-            <h1 style={{ marginTop: 300 }}>
-              404
-              <br />
-              Página no encontrada
-            </h1>
-          )}
+          component={NotFound}
         />
+         {/* <Route
+          path={'*'}
+          component={() => (
+            <>
+            <img src='../../assets/pagina-error-404-gato.png' />
+            </>
+          )}
+        /> */}
       </Switch>
     </Router>
   );

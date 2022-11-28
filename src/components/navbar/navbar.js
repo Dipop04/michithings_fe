@@ -1,48 +1,75 @@
-import React from "react";
-import { Container, Dropdown, DropdownButton, Nav, Navbar, Row } from "react-bootstrap";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faUserCircle} from '@fortawesome/free-solid-svg-icons';
-import './navbar.css'
-import Cookies from "universal-cookie/es6";
-
+import React from 'react';
+import { useState, useEffect } from "react";
+import { Navbar, Nav, Container } from "react-bootstrap";
+import logo_michi from '../../assets/img/logo_michi.png';
+import { HashLink } from 'react-router-hash-link';
+import Cookies from "universal-cookie";
+import {
+  BrowserRouter as Router
+} from "react-router-dom";
+//import Login from '../login/login';
 const cookies = new Cookies();
 
-export default class Menu extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
+export const Menu = () => {
+
+  const [activeLink, setActiveLink] = useState('home');
+  const [scrolled, setScrolled] = useState(false);
+  const [buttonInicio, setButtonInicio] = useState('Cerrar sesión');
+
+  useEffect(() => {
+    {console.log(window.location.pathname)}
+    (window.location.pathname === '/login')
+    ? setButtonInicio('Iniciar Sesión')
+    : setButtonInicio('Cerrar Sesión')
+    const onScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    }
+
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [])
+
+  const onUpdateActiveLink = (value) => {
+    setActiveLink(value);
   }
-  Logout(){
+
+  const logout = ()=> {
     cookies.remove('_s');
     window.location.reload();
+    setButtonInicio('Iniciar sesión')
   }
-  render() {
-    return (
-      <Navbar fixed="top" id="navbar" bg="primary" expand="lg" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">MichiThings.com</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
 
+  return (
+    <Router>
+      <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+        <Container>
+        
+          <Navbar.Brand className="logo" href="/">
+          <img src={logo_michi} alt="Logo" /><h1 className="social-icon-logo">Michi Things</h1>
+          
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav">
+            <span className="navbar-toggler-icon"></span>
+          </Navbar.Toggle>
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Productos</Nav.Link>
+              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Equipo</Nav.Link>
+              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Contáctenos</Nav.Link>
             </Nav>
-            <DropdownButton id="dropdown-basic-button" title="usuario">
-                <Dropdown.Header id="dropdown-header">
-                  <Row>
-                  <FontAwesomeIcon icon={faUserCircle}/>
-                  </Row>
-                  <Row>
-                    #USUARIO#
-                  </Row>
-                </Dropdown.Header>
-                <Dropdown.Divider/>
-              <Dropdown.Item onClick={() => this.Logout()}>Cerrar sesion</Dropdown.Item>
-              {/*<Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>*/}
-            </DropdownButton>
+            <span className="navbar-text">
+              <HashLink to='#login'>
+                <button className="vvd" onClick={() => logout() }><span>{buttonInicio}</span></button>
+              </HashLink>
+            </span>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    );
-  }
+    </Router>
+  )
 }

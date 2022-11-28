@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Form, Button } from 'react-bootstrap';
 import '../productos.css';
+import '../../prompts/prompts.css'
 import { request } from '../../helper/helper';
 import Loading from '../../loading/loading';
 import MessagePrompt from '../../prompts/message';
@@ -28,18 +29,13 @@ export default class ProductosEditar extends React.Component {
         descripcion:"",
         precio:"",
         disponibilidad:"",
-        codigo_producto:"",
         imagen1:"",
-        imagen2:"",
-        imagen3:"",
         tamano:"",
         raza:"",
         etapa_vida:"",
         tipo_producto:"",
         marca:"",
         peso:"",
-        beneficios:"",
-        caracteristicas:"",
       },
     };
     this.onExitedMessage = this.onExitedMessage.bind(this);
@@ -111,14 +107,14 @@ export default class ProductosEditar extends React.Component {
   }
   render() {
     return (
-      <Container id='productos-crear-container'>
-        <MessagePrompt
+      <Container  id='productos-crear-container'>
+        <MessagePrompt className="btn-editar"
           text={this.state.message.text}
           show={this.state.message.show}
           duration={2500}
           onExited={this.onExitedMessage}
         />
-        <ConfirmationPrompts
+        <ConfirmationPrompts className="btn-editar"        
           show={this.state.confirmation.show}
           title={this.state.confirmation.title}
           text={this.state.confirmation.text}  
@@ -152,38 +148,22 @@ export default class ProductosEditar extends React.Component {
             <Form.Group className="mb-3" controlId="formBasic">
               <Form.Label>Precio</Form.Label>
               <Form.Control 
+              type="Number" 
               value={this.state.producto.precio}
               onChange={ (e) => this.setValue("precio", e.target.value) }/>              
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasic">
               <Form.Label>Disponibilidad</Form.Label>
               <Form.Control 
+              type="Number" 
               value={this.state.producto.disponibilidad}
               onChange={ (e) => this.setValue("disponibilidad", e.target.value) }/>              
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasic">
-              <Form.Label>Código</Form.Label>
-              <Form.Control 
-              value={this.state.producto.codigo_producto}
-              onChange={ (e) => this.setValue("codigo_producto", e.target.value) }/>              
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasic">
               <Form.Label>Imagen 1</Form.Label>
               <Form.Control 
               value={this.state.producto.imagen1}
               onChange={ (e) => this.setValue("imagen1", e.target.value) }/>              
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasic">
-              <Form.Label>Imagen 2</Form.Label>
-              <Form.Control 
-              value={this.state.producto.imagen2}
-              onChange={ (e) => this.setValue("imagen2", e.target.value) }/>              
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasic">
-              <Form.Label>Imagen 3</Form.Label>
-              <Form.Control 
-              value={this.state.producto.imagen3}
-              onChange={ (e) => this.setValue("imagen3", e.target.value) }/>              
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasic">
               <Form.Label>Tamano</Form.Label>
@@ -218,23 +198,12 @@ export default class ProductosEditar extends React.Component {
             <Form.Group className="mb-3" controlId="formBasic">
               <Form.Label>Peso</Form.Label>
               <Form.Control 
+              type="Number" 
               value={this.state.producto.peso}
               onChange={ (e) => this.setValue("peso", e.target.value) }/>              
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasic">
-              <Form.Label>Beneficios</Form.Label>
-              <Form.Control 
-              value={this.state.producto.beneficios}
-              onChange={ (e) => this.setValue("beneficios", e.target.value) }/>              
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasic">
-              <Form.Label>Características</Form.Label>
-              <Form.Control 
-              value={this.state.producto.caracteristicas}
-              onChange={ (e) => this.setValue("caracteristicas", e.target.value) }/>              
-            </Form.Group>
             <Button
-              variant='primary'
+              className="btn-editar"
               onClick={() =>
                 this.setState({
                   confirmation: { ...this.state.confirmation, show: true },

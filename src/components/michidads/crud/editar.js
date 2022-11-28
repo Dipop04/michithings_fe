@@ -107,13 +107,13 @@ export default class MichidadsEditar extends React.Component {
   render() {
     return (
       <Container id='michidads-crear-container'>
-        <MessagePrompt
+        <MessagePrompt  className="btn-editar"
           text={this.state.message.text}
           show={this.state.message.show}
           duration={2500}
           onExited={this.onExitedMessage}
         />
-        <ConfirmationPrompts
+        <ConfirmationPrompts  className="btn-editar"
           show={this.state.confirmation.show}
           title={this.state.confirmation.title}
           text={this.state.confirmation.text}  

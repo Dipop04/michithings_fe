@@ -2,11 +2,12 @@
 {
     margin-top: 150px;
 }
-#productos-buscar-container, 
+#productos-buscar-container,
 #productos-crear-container
 {
     margin-top: 50px;
 }
+
 .react-bs-table-sizePerPage-dropdown .dropdown-toggle{
     float: left;
     margin-bottom: 20px;
@@ -23,3 +24,81 @@
     float:left;
     margin-bottom: 10px;
 }
+
+.buscar-producto {
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 8px 10px;
+    color:rgb(218, 229, 250);
+    background: linear-gradient(90.21deg, rgb(167, 216, 244) -5.91%, rgb(214, 164, 244) 111.58%);
+    border: 1px solid rgba(246, 243, 247, 0.5);
+    font-size: 13px;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+
+  .buscar {
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 8px 10px;
+    color:rgb(255, 255, 255);
+    background: linear-gradient(90.21deg, rgb(167, 216, 244) -5.91%, rgb(214, 164, 244) 111.58%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 24px;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+  .productos {
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 8px 10px;
+    color:rgb(224, 247, 254);
+    font-size: 24px;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+  .crear {
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 8px 10px;
+    color:rgb(255, 255, 255);
+    background: linear-gradient(90.21deg, rgb(88, 188, 245) -5.91%, rgb(191, 103, 241) 111.58%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+
+  .btn-crear {
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 8px 10px;
+    color:rgb(255, 255, 255);
+    background: linear-gradient(90.21deg, rgb(85, 5, 112) -5.91%, rgb(159, 46, 224) 111.58%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+  .btn-editar {
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 8px 10px;
+    color:rgb(255, 255, 255);
+    background: linear-gradient(90.21deg, rgb(85, 5, 112) -5.91%, rgb(159, 46, 224) 111.58%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+  .mensaje_modificar {
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 8px 10px;
+    color:rgb(255, 255, 255);
+    background: linear-gradient(90.21deg, rgb(88, 188, 245) -5.91%, rgb(191, 103, 241) 111.58%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    margin-bottom: 16px;
+    display: inline-block;
+  }

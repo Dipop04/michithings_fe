@@ -26,6 +26,7 @@ onExited() {
     return (
       <Container>
         <Modal
+         className="message"
           id="message-prompt"
           centered
           show={this.state.show}

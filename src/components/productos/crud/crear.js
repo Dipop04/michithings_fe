@@ -21,18 +21,18 @@ export default class ProductosCrear extends React.Component {
         descripcion:"",
         precio:"",
         disponibilidad:"",
-        codigo_producto:"",
+        // codigo_producto:"",
         imagen1:"",
-        imagen2:"",
-        imagen3:"",
+        // imagen2:"",
+        // imagen3:"",
         tamano:"",
         raza:"",
         etapa_vida:"",
         tipo_producto:"",
         marca:"",
         peso:"",
-        beneficios:"",
-        caracteristicas:"",
+        // beneficios:"",
+        // caracteristicas:"",
       },
     };
     this.onExitedMessage = this.onExitedMessage.bind(this);
@@ -71,7 +71,7 @@ export default class ProductosCrear extends React.Component {
   }
   render() {
     return (
-      <Container id="productos-crear-container">
+      <Container className="crear" id="productos-crear-container">
         <MessagePrompt
           text={this.state.message.text}
           show={this.state.message.show}
@@ -98,28 +98,28 @@ export default class ProductosCrear extends React.Component {
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasic">
               <Form.Label>Precio</Form.Label>
-              <Form.Control onChange={ (e) => this.setValue("precio", e.target.value) }/>              
+              <Form.Control type="Number" onChange={ (e) => this.setValue("precio", e.target.value) }/>              
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasic">
               <Form.Label>Disponibilidad</Form.Label>
-              <Form.Control onChange={ (e) => this.setValue("disponibilidad", e.target.value) }/>              
+              <Form.Control type="Number" onChange={ (e) => this.setValue("disponibilidad", e.target.value) }/>              
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasic">
+            {/* <Form.Group className="mb-3" controlId="formBasic">
               <Form.Label>Código</Form.Label>
               <Form.Control onChange={ (e) => this.setValue("codigo_producto", e.target.value) }/>              
-            </Form.Group>
+            </Form.Group> */}
             <Form.Group className="mb-3" controlId="formBasic">
               <Form.Label>Imagen 1</Form.Label>
               <Form.Control onChange={ (e) => this.setValue("imagen1", e.target.value) }/>              
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasic">
+            {/* <Form.Group className="mb-3" controlId="formBasic">
               <Form.Label>Imagen 2</Form.Label>
               <Form.Control onChange={ (e) => this.setValue("imagen2", e.target.value) }/>              
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasic">
               <Form.Label>Imagen 3</Form.Label>
               <Form.Control onChange={ (e) => this.setValue("imagen3", e.target.value) }/>              
-            </Form.Group>
+            </Form.Group> */}
             <Form.Group className="mb-3" controlId="formBasic">
               <Form.Label>Tamano</Form.Label>
               <Form.Control onChange={ (e) => this.setValue("tamano", e.target.value) }/>              
@@ -142,17 +142,17 @@ export default class ProductosCrear extends React.Component {
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasic">
               <Form.Label>Peso</Form.Label>
-              <Form.Control onChange={ (e) => this.setValue("peso", e.target.value) }/>              
+              <Form.Control type="Number" onChange={ (e) => this.setValue("peso", e.target.value) }/>              
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasic">
+            {/* <Form.Group className="mb-3" controlId="formBasic">
               <Form.Label>Beneficios</Form.Label>
               <Form.Control onChange={ (e) => this.setValue("beneficios", e.target.value) }/>              
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasic">
               <Form.Label>Características</Form.Label>
               <Form.Control onChange={ (e) => this.setValue("caracteristicas", e.target.value) }/>              
-            </Form.Group>
-            <Button variant="primary" onClick={()=> console.log(this.guardarProductos())}>
+            </Form.Group> */}
+            <Button className="btn-crear" onClick={()=> console.log(this.guardarProductos())}>
               Guardar producto
             </Button>
           </Form>

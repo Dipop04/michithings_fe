@@ -14,6 +14,7 @@ import Loading from '../loading/loading';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { isUndefined } from 'util';
+import "./../../App.css"
 
 const { SearchBar } = Search;
 
@@ -87,7 +88,7 @@ export default class DataGrid extends React.Component {
           search
         >
           {(props) => (
-            <div>
+            <div className="tablas">
               <hr />
               <PaginationProvider pagination={paginationFactory(options)}>
                 {({ paginationProps, paginationTableProps }) => (
@@ -100,7 +101,7 @@ export default class DataGrid extends React.Component {
                         <SearchBar {...props.searchProps} />
                       </Col>
                     </Row>
-                    <BootstrapTable
+                    <BootstrapTable 
                       keyField='bt'
                       data={this.state.rows}
                       columns={this.props.columns}

@@ -24,11 +24,11 @@ export default class ConfirmationPrompts extends React.Component {
       onHide={() => this.props.onCancel()}
       >
         <Modal.Header closeButton>
-          <Modal.Title>{this.state.title}</Modal.Title>
+          <Modal.Title className='message'>{this.state.title}</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
-          <p>{this.state.text}</p>
+          <p className='message' >{this.state.text}</p>
         </Modal.Body>
 
         <Modal.Footer>

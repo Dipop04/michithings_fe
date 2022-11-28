@@ -37,23 +37,23 @@ export default class Productos extends React.Component {
             onSelect={(eventKey) => this.setState({ currentTab: eventKey })}
           >
             <Nav.Item>
-              <Nav.Link eventKey="buscar">Buscar</Nav.Link>
+              <Nav.Link className="buscar" eventKey="buscar">Buscar</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="crear">Crear</Nav.Link>
+              <Nav.Link className="buscar" eventKey="crear">Crear</Nav.Link>
             </Nav.Item>
           </Nav>
         </Row>
-        <Row>
+        <Row >
           {this.state.currentTab === "buscar" ? (
-            <ProductosBuscar
+            <ProductosBuscar className="buscar" 
               changeTab={this.changeTab}
               setIdProducto={this.setIdProducto}
             />
           ) : this.state.currentTab === "crear" ? (
-            <ProductosCrear changeTab={this.changeTab} />
+            <ProductosCrear className="buscar" changeTab={this.changeTab} />
           ) : (
-            <ProductosEditar
+            <ProductosEditar className="buscar"
               changeTab={this.changeTab}
               getIdProducto={this.getIdProducto}
             />
