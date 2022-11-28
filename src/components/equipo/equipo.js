@@ -51,10 +51,10 @@ export const Equipo = () => {
                                     <Tab.Container id="equipos-tabs" defaultActiveKey="first">
                                         <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                             <Nav.Item>
-                                                <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                                                <Nav.Link eventKey="first">Conócenos</Nav.Link>
                                             </Nav.Item>
                                             <Nav.Item>
-                                                <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                                                <Nav.Link eventKey="second">Nuestro secreto</Nav.Link>
                                             </Nav.Item>
                                         </Nav>
                                         <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -73,10 +73,11 @@ export const Equipo = () => {
                                                 </Row>
                                             </Tab.Pane>
                                             <Tab.Pane eventKey="section">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                                                <p></p>
                                             </Tab.Pane>
-                                            <Tab.Pane eventKey="third">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                                            <Tab.Pane eventKey="second">
+                                                <p>El equipo siempre está encontrándose para sacar lo mejor de cada uno, aportando más que sólo lo necesario para sacar adelante los proyectos creados en <b>Misión TIC 2022.</b></p>
+                                                <p>¿Nuestro secreto? No conformarnos jamás y siempre estar dispuestos a trabajar a pesar de las jornadas laborales, ya que todos somos padres de familia y contamos con tiempo reducido, y aún así demostramos que querer es poder.</p>
                                             </Tab.Pane>
                                         </Tab.Content>
                                     </Tab.Container>
