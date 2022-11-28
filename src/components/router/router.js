@@ -6,6 +6,8 @@ import PrivateRoute from '../auth/privaterouter';
 import productos from '../productos/iniciop';
 import michidads from '../michidads/iniciom';
 import { NotFound } from '../NotFound/NotFound';
+import { Equipo } from '../equipo/equipo';
+import { Contacto } from '../contacto/contacto';
 
 
 export default function AppRoutes() {
@@ -15,20 +17,13 @@ export default function AppRoutes() {
         <PrivateRoute exact path={['/productos']} component={productos} />
         <PrivateRoute exact path={['/michidads']} component={michidads} />
         <Route exact path={['/login']} component={Login} />
-        
-        <Route exact path={['/', '/index']} component={Inicio} />
+        <Route exact path={['/equipo']} component={Equipo} />
+        <Route exact path={['/contacto']} component={Contacto} />
+        <Route exact path={['/', '/index']} component={Login} />
         <Route
           path={'*'}
           component={NotFound}
         />
-         {/* <Route
-          path={'*'}
-          component={() => (
-            <>
-            <img src='../../assets/pagina-error-404-gato.png' />
-            </>
-          )}
-        /> */}
       </Switch>
     </Router>
   );
