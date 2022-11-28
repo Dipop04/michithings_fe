@@ -4,7 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import catImg from "../../assets/img/gato_feliz.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import '../../App.css';
-//import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {

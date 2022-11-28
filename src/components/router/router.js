@@ -5,7 +5,6 @@ import Inicio from '../index/index';
 import PrivateRoute from '../auth/privaterouter';
 import productos from '../productos/iniciop';
 import michidads from '../michidads/iniciom';
-import { Image } from 'react-bootstrap';
 import { NotFound } from '../NotFound/NotFound';
 
 

@@ -3,7 +3,7 @@ import './App.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Banner } from './components/index/index2';
-
+import { Equipo } from './components/equipo/equipo';
 
 import { Menu } from './components/navbar/navbar';
 import {Container} from 'react-bootstrap';
@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Menu />
       <Banner />
-      {/* <Login /> */}
+      {<Equipo />}
       <Container>
       <AppRouter />
     </Container>
