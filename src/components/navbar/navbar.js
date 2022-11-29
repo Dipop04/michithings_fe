@@ -14,11 +14,11 @@ export const Menu = () => {
 
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
-  const [buttonInicio, setButtonInicio] = useState('Cerrar sesión');
+  const [buttonInicio, setButtonInicio] = useState('Iniciar sesión');
 
   useEffect(() => {
     {console.log(window.location.pathname)}
-    (window.location.pathname === '/login')
+    (window.location.pathname === '/login' || window.location.pathname === '/' || window.location.pathname === '/index')
     ? setButtonInicio('Iniciar Sesión')
     : setButtonInicio('Cerrar Sesión')
     const onScroll = () => {
@@ -41,7 +41,8 @@ export const Menu = () => {
   const logout = ()=> {
     cookies.remove('_s');
     window.location.reload();
-    setButtonInicio('Iniciar sesión')
+    setButtonInicio('Iniciar Sesión')
+    
   }
 
   return (
@@ -60,8 +61,20 @@ export const Menu = () => {
             <Nav className="ms-auto">
               <Nav.Link href="#home" className={activeLink === 'inicio' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Inicio</Nav.Link>
               <Nav.Link href="#equipo" className={activeLink === 'equipo' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('equipo')}>Equipo</Nav.Link>
-              <Nav.Link href="#contacto" className={activeLink === 'contacto' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contacto')}>Contáctenos</Nav.Link>
-              <Nav.Link href="#login" className="navbar-text"><button className='vvd'><span>{buttonInicio}</span></button></Nav.Link>
+              <Nav.Link href="#contacto" className={activeLink === 'contacto' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contacto')}>Contáctenos</Nav.Link>              
+              {(buttonInicio === 'Iniciar Sesión')
+              ?<Nav.Link href="#login" className="navbar-text">
+              <button className='vvd'>
+                <span>{buttonInicio}</span>
+              </button>
+            </Nav.Link>
+              :<Nav.Link href="#login" className="navbar-text">
+              <button className='vvd' onClick={() => logout()}>
+                <span>{buttonInicio}</span>
+              </button>
+            </Nav.Link>
+              }
+              
             </Nav>
             {/* <span className="navbar-text">
               <HashLink to='#login'>

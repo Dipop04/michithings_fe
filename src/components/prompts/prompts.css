@@ -6,12 +6,40 @@
 #message-prompt .modal-content {
   width: auto;
 }
-.message {
+.message-title {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
   color:rgb(29, 1, 39);
-  font-size: 24px;
+  font-size: 27px;
   margin-bottom: 16px;
+  display: inline-block;
+}
+.message-text {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  color:rgb(29, 1, 39);
+  font-size: 22px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.btn-guardar {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  color:rgb(255, 255, 255);
+  background: linear-gradient(90.21deg, rgb(85, 5, 112) -5.91%, rgb(159, 46, 224) 111.58%);
+  font-size: 13px;
+  display: inline-block;
+}
+.btn-cancelar {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  color:rgb(255, 255, 255);
+  background: linear-gradient(90.21deg, rgb(48, 48, 48) -5.91%, rgb(141, 140, 142) 111.58%);
+  font-size: 13px;
   display: inline-block;
 }

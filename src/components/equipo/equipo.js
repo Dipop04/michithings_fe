@@ -14,7 +14,7 @@ export const Equipo = () => {
         {
             title: "Karen Melissa Rojas",
             description: "Gestora de proyecto",
-            description2: "Karencilla es quien ayuda con nuestra coordinación, atenta a cumplir los compromisos y que la información fluya correctamente. Le encanta aprender, leer y sobre todo pasar tiempo con su familia.",
+            description2: "Karencilla es quien ayuda con nuestra coordinación, atenta a cumplir los compromisos y que la información fluya correctamente. Le encanta aprender, leer y pasar tiempo con su familia.",
             imgUrl: foto_karen,
         },
         {
@@ -57,7 +57,7 @@ export const Equipo = () => {
                                                 <Nav.Link eventKey="second">Nuestro secreto</Nav.Link>
                                             </Nav.Item>
                                         </Nav>
-                                        <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                                        <Tab.Content id="fadeIn" className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                             <Tab.Pane eventKey="first">
                                                 <Row>
                                                     {

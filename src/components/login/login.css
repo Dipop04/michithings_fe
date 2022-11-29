@@ -19,13 +19,15 @@
 /************ Login Css ************/
 .login {
     background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-    padding: 60px 0 200px 0;
+    padding: 80px 0 200px 0;
   }
   .login img {
     width: 92%;
+    animation: shakeX 12s linear infinite;
   }
+
   .login h2 {
-    font-size: 45px;
+    font-size: 55px;
     font-weight: 700;
     margin-bottom: 30px;
   }
@@ -99,4 +101,7 @@
 .btn .active .login form button:active {
   color: #FFF;
   background-color: #121212;
+}
+.row{
+  align-items: center;
 }

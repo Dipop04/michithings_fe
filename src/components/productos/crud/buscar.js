@@ -33,22 +33,10 @@ const columns = [
     dataField: "disponibilidad",
     text: " Disponibilidad",
   },
-  // {
-  //   dataField: "codigo_producto",
-  //   text: "Código",
-  // },
   {
     dataField: "imagen1",
     text: "Imagen 1",
    },
-  // {
-  //   dataField: "imagen2",
-  //   text: "Imagen 2",
-  // },
-  // {
-  //   dataField: "imagen3",
-  //   text: "Imagen 3",
-  // },
   {
     dataField: "tamano",
     text: "Tamaño",
@@ -73,14 +61,6 @@ const columns = [
     dataField: "peso",
     text: "Peso",
   },
-  // {
-  //   dataField: "beneficios",
-  //   text: "Beneficios",
-  // },
-  // {
-  //   dataField: "caracteristicas",
-  //   text: "Características",
-  // },
 ];
 
 export default class ProductosBuscar extends React.Component {

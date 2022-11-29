@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 //import { Login } from './components/login/login'
 import AppRouter from './components/router/router';
+import { Menu } from './components/navbar/navbar';
 import { Index } from './components/index/Index';
 
 
@@ -12,11 +13,10 @@ import { Index } from './components/index/Index';
 function App() {
   return (
     <div className="App">
-      <Index />
-      {/* <Container>
+      <Menu />
+      <Container>
         <AppRouter />
-      </Container> */}
-      {/* <Login /> */}
+      </Container>
     </div>
   );
 }

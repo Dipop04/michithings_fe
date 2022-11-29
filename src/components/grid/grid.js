@@ -14,7 +14,7 @@ import Loading from '../loading/loading';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { isUndefined } from 'util';
-import "./../../App.css"
+import "./grid.css"
 
 const { SearchBar } = Search;
 
@@ -54,7 +54,7 @@ export default class DataGrid extends React.Component {
       text: 'Editar',
       formatter: (cell, row) => {
         return (
-          <Button onClick={() => this.props.onClickEditButton(row)}>
+          <Button className='btn-editar' onClick={() => this.props.onClickEditButton(row)}>
             <FontAwesomeIcon icon={faEdit} />
           </Button>
         );
@@ -66,7 +66,7 @@ export default class DataGrid extends React.Component {
       text: 'Eliminar',
       formatter: (cell, row) => {
         return (
-          <Button onClick={() => this.props.onClickDeleteButton(row)}>
+          <Button className="btn-eliminar" onClick={() => this.props.onClickDeleteButton(row)}>
             <FontAwesomeIcon icon={faTrash} />
           </Button>
         );

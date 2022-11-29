@@ -24,18 +24,18 @@ export default class ConfirmationPrompts extends React.Component {
       onHide={() => this.props.onCancel()}
       >
         <Modal.Header closeButton>
-          <Modal.Title className='message'>{this.state.title}</Modal.Title>
+          <Modal.Title className='message-title'>{this.state.title}</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
-          <p className='message' >{this.state.text}</p>
+          <p className='message-text' >{this.state.text}</p>
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant='secondary' onClick={() => this.props.onCancel()}>
+          <Button className="btn-cancelar" onClick={() => this.props.onCancel()}>
             Cancelar
           </Button>
-          <Button variant='primary' onClick={() => this.props.onConfirm()}>
+          <Button className="btn-guardar" onClick={() => this.props.onConfirm()}>
             Confirmar
           </Button>
         </Modal.Footer>

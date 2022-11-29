@@ -27,14 +27,14 @@ export const Contacto = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Enviando...");
-    let response = await fetch("http://localhost:5000/contact", {
+    let response = await fetch("", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
       body: JSON.stringify(formDetails),
     });
-    setButtonText("Send");
+    setButtonText("Enviado");
     let result = await response.json();
     setFormDetails(formInitialDetails);
     if (result.code == 200) {
@@ -48,17 +48,17 @@ export const Contacto = () => {
         <section className="contact" id="contacto">
         <Container>
           <Row className="align-items-center">
-            <Col size={12} md={6}>
+            <Col size={10} md={6}>
               <TrackVisibility>
                 {({ isVisible }) =>
-                  <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={contactImg} alt="Contact Us"/>
+                  <img src={contactImg} alt="Contact Us"/>
                 }
               </TrackVisibility>
             </Col>
-            <Col size={12} md={6}>
+            <Col size={16} md={6}>
               <TrackVisibility>
                 {({ isVisible }) =>
-                  <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <div>
                   <h2>Contáctanos</h2>
                   <form onSubmit={handleSubmit}>
                     <Row>

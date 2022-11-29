@@ -1,0 +1,15 @@
+git remote add origin https://github.com/Dipop04/mochila.git
+
+
+Crear ramas, basadas en develop: git checkout -b (rama nueva)
+cambiar a otra rama existente: git checkout (nombre rama)
+
+git checkout develop
+git checkout -b front
+git checkout -b back
+
+Enviar los cambios al github: git push
+para enviar todo a develop:
+git checkout develop
+git merge front
+

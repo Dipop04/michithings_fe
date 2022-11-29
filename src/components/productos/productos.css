@@ -102,3 +102,10 @@
     margin-bottom: 16px;
     display: inline-block;
   }
+
+  .nav-tabs {
+    background-color: rgb(31, 3, 36);
+  }
+  .nav-link-active {
+    background-color: rgb(213, 186, 218);
+  }

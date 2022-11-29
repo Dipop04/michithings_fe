@@ -77,6 +77,7 @@ export default class ProductosEditar extends React.Component {
           this.props.changeTab('buscar');
         }
         this.setState({ loading: false });
+        if (response.data.exito) this.reloadPage();
       })
 
       .catch((err) => {
@@ -84,6 +85,11 @@ export default class ProductosEditar extends React.Component {
         this.setState({ loading: true });
       });
   }
+  reloadPage() {
+    setTimeout(() => {
+        window.location.reload();
+    }, 2500);
+}
   onExitedMessage() {
     if (this.state.rediret) this.props.changeTab('buscar');
   }

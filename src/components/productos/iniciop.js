@@ -4,6 +4,7 @@ import "./productos.css";
 import ProductosBuscar from "./crud/buscar";
 import ProductosCrear from "./crud/crear";
 import ProductosEditar from "./crud/editar";
+import { Menu } from "../navbar/navbar";
 
 export default class Productos extends React.Component {
   constructor(props) {
@@ -28,38 +29,41 @@ export default class Productos extends React.Component {
   }
   render() {
     return (
-      <Container id="productos-container">
-        <Row>
-          <Nav
-            fill
-            variant="tabs"
-            defaultActiveKey="/buscar"
-            onSelect={(eventKey) => this.setState({ currentTab: eventKey })}
-          >
-            <Nav.Item>
-              <Nav.Link className="buscar" eventKey="buscar">Buscar</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link className="buscar" eventKey="crear">Crear</Nav.Link>
-            </Nav.Item>
-          </Nav>
-        </Row>
-        <Row >
-          {this.state.currentTab === "buscar" ? (
-            <ProductosBuscar className="buscar" 
-              changeTab={this.changeTab}
-              setIdProducto={this.setIdProducto}
-            />
-          ) : this.state.currentTab === "crear" ? (
-            <ProductosCrear className="buscar" changeTab={this.changeTab} />
-          ) : (
-            <ProductosEditar className="buscar"
-              changeTab={this.changeTab}
-              getIdProducto={this.getIdProducto}
-            />
-          )}
-        </Row>
-      </Container>
+      <>
+        {/* <Menu /> */}
+        <Container id="productos-container">
+          <Row>
+            <Nav
+              fill
+              variant="tabs"
+              defaultActiveKey="/buscar"
+              onSelect={(eventKey) => this.setState({ currentTab: eventKey })}
+            >
+              <Nav.Item>
+                <Nav.Link className="buscar" eventKey="buscar">Buscar</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link className="buscar" eventKey="crear">Crear</Nav.Link>
+              </Nav.Item>
+            </Nav>
+          </Row>
+          <Row >
+            {this.state.currentTab === "buscar" ? (
+              <ProductosBuscar className="buscar" 
+                changeTab={this.changeTab}
+                setIdProducto={this.setIdProducto}
+              />
+            ) : this.state.currentTab === "crear" ? (
+              <ProductosCrear className="buscar" changeTab={this.changeTab} />
+            ) : (
+              <ProductosEditar className="buscar"
+                changeTab={this.changeTab}
+                getIdProducto={this.getIdProducto}
+              />
+            )}
+          </Row>
+        </Container>
+      </>
     );
   }
 }
