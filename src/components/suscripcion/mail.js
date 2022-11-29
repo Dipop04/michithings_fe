@@ -1,6 +1,7 @@
 
 import React from 'react';
-import MailchimpSubscribe from "react-mailchimp-subscribe";
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
+
 import { Suscripcion } from "./suscripcion"; 
 
 export const FormularioEmail = () => {
@@ -17,7 +18,7 @@ export const FormularioEmail = () => {
             onValidated={formData => subscribe(formData)}
             />
         )}
-        />
+      />
     </>
   )
 }
