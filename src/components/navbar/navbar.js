@@ -59,16 +59,16 @@ export const Menu = () => {
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home" className={activeLink === 'inicio' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Inicio</Nav.Link>
-              <Nav.Link href="#equipo" className={activeLink === 'equipo' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('equipo')}>Equipo</Nav.Link>
-              <Nav.Link href="#contacto" className={activeLink === 'contacto' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contacto')}>Contáctenos</Nav.Link>              
+              <Nav.Link href="/index#home" className={activeLink === 'inicio' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Inicio</Nav.Link>
+              <Nav.Link href="/index#equipo" className={activeLink === 'equipo' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('equipo')}>Equipo</Nav.Link>
+              <Nav.Link href="/index#contacto" className={activeLink === 'contacto' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contacto')}>Contáctenos</Nav.Link>              
               {(buttonInicio === 'Iniciar Sesión')
-              ?<Nav.Link href="#login" className="navbar-text">
+              ?<Nav.Link href="/index#login" className="navbar-text">
               <button className='vvd'>
                 <span>{buttonInicio}</span>
               </button>
             </Nav.Link>
-              :<Nav.Link href="#login" className="navbar-text">
+              :<Nav.Link href="/index#login" className="navbar-text">
               <button className='vvd' onClick={() => logout()}>
                 <span>{buttonInicio}</span>
               </button>
