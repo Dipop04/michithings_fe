@@ -16,7 +16,6 @@ export const Index = () => {
         <Banner />
         <Equipo />
         <Contacto />
-        <Login />
         <Footer />
     </>
   )

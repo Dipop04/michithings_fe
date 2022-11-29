@@ -63,12 +63,12 @@ export const Menu = () => {
               <Nav.Link href="/index#equipo" className={activeLink === 'equipo' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('equipo')}>Equipo</Nav.Link>
               <Nav.Link href="/index#contacto" className={activeLink === 'contacto' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contacto')}>Contáctenos</Nav.Link>              
               {(buttonInicio === 'Iniciar Sesión')
-              ?<Nav.Link href="/index#login" className="navbar-text">
+              ?<Nav.Link href="/login" className="navbar-text">
               <button className='vvd'>
                 <span>{buttonInicio}</span>
               </button>
             </Nav.Link>
-              :<Nav.Link href="/index#login" className="navbar-text">
+              :<Nav.Link href="/login" className="navbar-text">
               <button className='vvd' onClick={() => logout()}>
                 <span>{buttonInicio}</span>
               </button>
